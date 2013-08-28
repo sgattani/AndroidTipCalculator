@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tip Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="tip_label_text">Tip Amount</string>
+    <string name="empty_string">&quot;-------&quot;</string>
+    <string name="total_amt_label">Total Amount</string>
+    <string name="bill_amount_hint">Enter Bill Amount</string>
+    <string name="round_label">Round</string>
+    <string name="exact_label">Exact</string>
+    <string name="ten_pct_label">10%</string>
+    <string name="fifteen_pct_label">15%</string>
+    <string name="twenty_pct_label">20%</string>
+    <string name="custom_pct_label">Custom</string>
+    <string name="round_btn_label">Round</string>
+    <string name="bill_amount_label">Bill $</string>
+
+</resources>

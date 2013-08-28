@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculatorActivity" >
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="150dp"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/etCustomTipPct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rgTipPercentages"
+        android:layout_below="@+id/rgTipPercentages"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvTotalAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTipAmountValue"
+        android:layout_below="@+id/tvTipAmountValue"
+        android:layout_marginTop="20dp"
+        android:text="@string/total_amt_label" />
+
+    <TextView
+        android:id="@+id/tvTipAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTipAmtLabel"
+        android:layout_below="@+id/tvTipAmtLabel"
+        android:text="@string/empty_string"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTotalAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTotalAmountLabel"
+        android:layout_below="@+id/tvTotalAmountLabel"
+        android:text="@string/empty_string"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/rgTipPercentages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvTotalAmountLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/vDivider" >
+
+        <RadioButton
+            android:id="@+id/rbtn10Pct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/ten_pct_label" />
+
+        <RadioButton
+            android:id="@+id/rbtn15Pct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteen_pct_label" />
+
+        <RadioButton
+            android:id="@+id/rbtn20Pct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twenty_pct_label" />
+
+        <RadioButton
+            android:id="@+id/rbtnCustomPct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_pct_label" />
+    </RadioGroup>
+
+    <ToggleButton
+        android:id="@+id/tBtnRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rgTipPercentages"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/etCustomTipPct"
+        android:layout_marginTop="20dp"
+        android:text="@string/round_btn_label"
+        android:textOff="@string/exact_label"
+        android:textOn="@string/round_label" />
+
+    <TextView
+        android:id="@+id/tvTipAmtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/tBtnRound"
+        android:layout_marginLeft="14dp"
+        android:text="@string/tip_label_text" />
+
+    <EditText
+        android:id="@+id/etBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:layout_toRightOf="@+id/tvBillAmountLabel"
+        android:ems="10"
+        android:hint="@string/bill_amount_hint"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvBillAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etBillAmount"
+        android:layout_alignBottom="@+id/etBillAmount"
+        android:layout_alignLeft="@+id/tvTotalAmountValue"
+        android:text="@string/bill_amount_label" />
+
+</RelativeLayout>
